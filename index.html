@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ege Aksoy — Portfolio</title>
+  <meta name="description" content="Portfolio of Ege Aksoy, Information Systems student at Bilkent University. Projects in Java, Python, networking, and automation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">EA</a>
+      <nav class="nav-links">
+        <a href="#about" class="nav-link" data-text="About">About</a>
+        <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+        <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+        <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+        <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-meta reveal">
+          <span class="mono">Bilkent University</span>
+          <span class="dot">·</span>
+          <span class="mono">Information Systems</span>
+          <span class="dot">·</span>
+          <span class="mono">Ankara, Turkey</span>
+        </div>
+
+        <h1 class="hero-title reveal">
+          <span class="line">Ege</span>
+          <span class="line italic">Aksoy</span>
+        </h1>
+
+        <div class="hero-rule reveal"></div>
+
+        <p class="hero-description reveal">
+          Building data-driven systems at the intersection of<br/>
+          <em>crypto networks, real-time analysis, and software engineering.</em>
+        </p>
+
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="mailto:egeaksoy@ug.bilkent.edu.tr" class="btn-ghost">Get in Touch</a>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num">Multiple</span>
+            <span class="stat-label">Live Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">Java</span>
+            <span class="stat-label">OOP & Desktop</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">Automation</span>
+            <span class="stat-label">Networks & Tools</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2028</span>
+            <span class="stat-label">Graduation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span class="mono">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <div class="section-label reveal">
+          <span class="mono">01 — About</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-heading reveal">
+            <h2>Who<br/><em>I Am</em></h2>
+          </div>
+
+          <div class="about-content">
+            <p class="about-text reveal">
+              I am an undergraduate student at Bilkent University with a strong interest
+              in cryptocurrency systems, networking, and data analysis — focusing on how
+              real-time data flows through systems and can be processed effectively.
+            </p>
+            <p class="about-text reveal">
+              I enjoy building data-driven projects that capture, analyze, and react to
+              live information, combining software development with automation and
+              system-level thinking.
+            </p>
+
+            <div class="about-info reveal">
+              <div class="info-row">
+                <span class="info-key mono">University</span>
+                <span class="info-val">Bilkent University</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key mono">Department</span>
+                <span class="info-val">Computer Technologies & Information Systems</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key mono">Graduation</span>
+                <span class="info-val">May 2028</span>
+              </div>
+              <div class="info-row">
+                <span class="info-key mono">IELTS</span>
+                <span class="info-val">7.5 / C1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="coursework reveal">
+          <span class="mono coursework-label">Relevant Coursework</span>
+          <div class="chips">
+            <span>Data Structures & Algorithms</span>
+            <span>Discrete Mathematics</span>
+            <span>Object-Oriented Programming</span>
+            <span>Computer Networks</span>
+            <span>Database Management Systems</span>
+            <span>Frontend Web Technologies</span>
+            <span>Technical Mathematics</span>
+            <span>Principles of Software Engineering</span>
+            <span>Computer Algorithms</span>
+            <span>Fundamentals of Information Systems</span>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section-dark" id="experience">
+      <div class="section-inner">
+        <div class="section-label reveal">
+          <span class="mono">02 — Experience</span>
+        </div>
+
+        <h2 class="section-title reveal">Internship<br/><em>Experience</em></h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <span class="mono timeline-date">Jul – Aug 2025</span>
+            </div>
+            <div class="timeline-line">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-right">
+              <h3>Information Technology Intern</h3>
+              <p class="timeline-company mono">Göltaş Çimento · Isparta, Turkey</p>
+              <ul>
+                <li>Worked with SAP ERP systems and gained practical exposure to ABAP programming.</li>
+                <li>Designed automation workflows with Microsoft Power Automate and n8n.</li>
+                <li>Replaced repetitive manual processes with efficient automated solutions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <div class="section-label reveal">
+          <span class="mono">03 — Projects</span>
+        </div>
+
+        <h2 class="section-title reveal">Selected<br/><em>Work</em></h2>
+
+        <div class="projects-list">
+
+          <article class="project-item reveal" data-index="06">
+    <div class="project-index mono">01</div>
+    <div class="project-body">
+      <div class="project-header">
+      <h3>Real-Time Opportunity Detector</h3>
+      <div class="project-badges">
+        <span class="badge">Java</span>
+        <span class="badge">Maven</span>
+        <span class="badge">Binance API</span>
+        <span class="badge">Telegram Bot</span>
+        <span class="badge featured">Live System</span>
+      </div>
+    </div>
+    <p>A real-time crypto opportunity tracking system built in Java to monitor live Binance market data, detect price and volume anomalies, evaluate correlated assets, and send instant Telegram alerts. Includes scheduled scanning, signal scoring, JSON-based history logging, and an extensible dashboard workflow.</p>
+    <div class="project-links">
+      <span class="project-link muted">Live Dashboard (Coming Soon)</span>
+      <a href="https://github.com/egeaksoy00/real-time-opportunity-detector" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+          
+
+                    <article class="project-item reveal" data-index="01">
+            <div class="project-index mono">02</div>
+            <div class="project-body">
+              <div class="project-header">
+                <h3>Frontend Black Tile Game</h3>
+                <div class="project-badges">
+                  <span class="badge">HTML</span>
+                  <span class="badge">CSS</span>
+                  <span class="badge">JavaScript</span>
+                  <span class="badge featured">Live Demo</span>
+                </div>
+              </div>
+              <p>A reaction-based browser game built with HTML, CSS, and JavaScript. Includes a countdown screen, dynamic tile generation, scoring, local high score storage, and a live GitHub Pages deployment.</p>
+              <div class="project-links">
+                <a href="https://egeaksoy00.github.io/frontend-black-tile-game/" target="_blank" rel="noopener" class="project-link">Live Demo ↗</a>
+                <a href="https://github.com/egeaksoy00/frontend-black-tile-game" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-index="03">
+            <div class="project-index mono">03</div>
+            <div class="project-body">
+              <div class="project-header">
+                <h3>Court Reservation System</h3>
+                <div class="project-badges">
+                  <span class="badge">Java</span>
+                  <span class="badge">OOP</span>
+                  <span class="badge">Java Swing</span>
+                </div>
+              </div>
+              <p>A desktop-based court reservation application built with Java and Swing. Allows users to view available courts and create bookings through an interactive interface using object-oriented design principles.</p>
+              <div class="project-links">
+                <span class="project-link muted">GitHub (Coming Soon)</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-index="04">
+            <div class="project-index mono">04</div>
+            <div class="project-body">
+              <div class="project-header">
+                <h3>Cryptography Collection</h3>
+                <div class="project-badges">
+                  <span class="badge">Java</span>
+                  <span class="badge">Algorithms</span>
+                </div>
+              </div>
+              <p>A collection of cryptography implementations in Java — Caesar Cipher, Vigenère Cipher, brute-force tools, and educational classical encryption experiments.</p>
+              <div class="project-links">
+                <a href="https://github.com/egeaksoy00/Cryptography" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-index="05">
+            <div class="project-index mono">05</div>
+            <div class="project-body">
+              <div class="project-header">
+                <h3>Basic Network Sniffer</h3>
+                <div class="project-badges">
+                  <span class="badge">Python</span>
+                  <span class="badge">Scapy</span>
+                  <span class="badge">Networking</span>
+                </div>
+              </div>
+              <p>A lightweight packet sniffer built with Python and Scapy. Captures and parses packets while performing protocol-level analysis and real-time logging. Integrated with GitHub Actions.</p>
+              <div class="project-links">
+                <a href="https://github.com/egeaksoy00/basic-network-sniffer" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-item reveal" data-index="06">
+            <div class="project-index mono">06</div>
+            <div class="project-body">
+              <div class="project-header">
+                <h3>BudgetBuddy</h3>
+                <div class="project-badges">
+                  <span class="badge">Figma</span>
+                  <span class="badge">React Native</span>
+                  <span class="badge">Firebase</span>
+                </div>
+              </div>
+              <p>A student-focused budgeting app concept designed to help users track daily, weekly, and monthly expenses through a clean and accessible interface.</p>
+              <div class="project-links">
+                <span class="project-link muted">Prototype / Concept</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section-dark" id="skills">
+      <div class="section-inner">
+        <div class="section-label reveal">
+          <span class="mono">04 — Skills</span>
+        </div>
+
+        <h2 class="section-title reveal">Tech<br/><em>Stack</em></h2>
+
+        <div class="skills-grid">
+          <div class="skill-block reveal">
+            <span class="skill-block-label mono">Languages</span>
+            <div class="skill-items">
+              <span>Java</span>
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>C</span>
+            </div>
+          </div>
+          <div class="skill-block reveal">
+            <span class="skill-block-label mono">Concepts</span>
+            <div class="skill-items">
+              <span>Object-Oriented Programming</span>
+              <span>Data Structures</span>
+              <span>Algorithms</span>
+              <span>Networking</span>
+              <span>Packet Analysis</span>
+              <span>Automation</span>
+            </div>
+          </div>
+          <div class="skill-block reveal">
+            <span class="skill-block-label mono">Tools</span>
+            <div class="skill-items">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Java Swing</span>
+              <span>n8n</span>
+              <span>Power Automate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="section-inner">
+        <div class="contact-top reveal">
+          <span class="mono">05 — Contact</span>
+        </div>
+
+        <h2 class="contact-title reveal">
+          Let's<br/><em>Connect</em>
+        </h2>
+
+        <p class="contact-desc reveal">
+          Open to collaborations, projects, and opportunities.<br/>
+          Reach out through any of the channels below.
+        </p>
+
+        <div class="contact-links reveal">
+          <a href="mailto:egeaksoy@ug.bilkent.edu.tr" class="contact-link">
+            <span class="mono contact-type">Email</span>
+            <span class="contact-value">egeaksoy@ug.bilkent.edu.tr ↗</span>
+          </a>
+          <a href="https://github.com/egeaksoy00" target="_blank" rel="noopener" class="contact-link">
+            <span class="mono contact-type">GitHub</span>
+            <span class="contact-value">github.com/egeaksoy00 ↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/egeaksoy00/" target="_blank" rel="noopener" class="contact-link">
+            <span class="mono contact-type">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/egeaksoy00 ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="mono">© <span id="year"></span> Ege Aksoy</span>
+      <span class="mono footer-right">Bilkent University · Ankara</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
