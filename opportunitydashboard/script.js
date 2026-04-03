@@ -73,7 +73,7 @@ function normalizeRecord(record) {
 
 async function loadSignals() {
   try {
-    const response = await fetch("./data/signal-history.json", { cache: "no-store" });
+    const response = await fetch("/opportunitydashboard/data/signal-history.json", { cache: "no-store" });
 
     if (!response.ok) {
       throw new Error(`Failed to load signal history: ${response.status}`);
