@@ -19,6 +19,8 @@ buttons.forEach((button) => {
 
 function updateClock() {
   const clock = document.getElementById("clock");
+  if (!clock) return;
+
   const now = new Date();
   clock.textContent = now.toLocaleTimeString([], {
     hour: "2-digit",
@@ -55,7 +57,7 @@ function showWelcome() {
     <section class="welcome-screen">
       <div class="welcome-card">
         <p class="welcome-kicker">EgeOS boot sequence interrupted</p>
-        <h1>Welcome, visitor.</h1>
+        <h1>Welcome, stranger.</h1>
         <p>
           You found the close button. Nice.
           This is Ege Aksoy’s tiny operating system for projects,
@@ -71,25 +73,19 @@ function showWelcome() {
 
   const enterButton = document.getElementById("enterEgeOS");
 
-  enterButton.addEventListener("click", () => {
-    window.location.reload();
-  });
+  if (enterButton) {
+    enterButton.addEventListener("click", () => {
+      window.location.reload();
+    });
+  }
 }
 
 const closeButtons = document.querySelectorAll(".traffic span:first-child");
 
-closeButtons.forEach((closeButton) => {
-  closeButton.style.cursor = "pointer";
-  closeButton.addEventListener("click", showWelcome);
+closeButtons.forEach((button) => {
+  button.style.cursor = "pointer";
+  button.addEventListener("click", showWelcome);
 });
-
-if (closeButton) {
-  closeButton.style.cursor = "pointer";
-  closeButton.addEventListener("click", showWelcome);
-}
-
-const terminalInput = document.getElementById("terminalInput");
-const terminalBox = document.getElementById("terminalBox");
 
 const commands = {
   help: [
@@ -127,37 +123,54 @@ const commands = {
   ],
 };
 
-function writeTerminalLine(text) {
-  if (!terminalBox) return;
-  const p = document.createElement("p");
-  p.textContent = text;
-  terminalBox.appendChild(p);
-  terminalBox.scrollTop = terminalBox.scrollHeight;
+function runTerminalCommand() {
+  const terminalInput = document.getElementById("terminalInput");
+  const terminalBox = document.getElementById("terminalBox");
+
+  if (!terminalInput || !terminalBox) return;
+
+  const command = terminalInput.value.trim().toLowerCase();
+  terminalInput.value = "";
+
+  if (!command) return;
+
+  const write = (text) => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    terminalBox.appendChild(p);
+    terminalBox.scrollTop = terminalBox.scrollHeight;
+  };
+
+  write(`user@egeos:~$ ${command}`);
+
+  if (command === "clear") {
+    terminalBox.innerHTML = "";
+    return;
+  }
+
+  const response = commands[command];
+
+  if (response) {
+    response.forEach(write);
+  } else {
+    write(`Command not found: ${command}`);
+    write("Type 'help' to see available commands.");
+  }
 }
 
-if (terminalInput && terminalBox) {
-  terminalInput.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter") return;
+document.addEventListener("keydown", (event) => {
+  const terminalInput = document.getElementById("terminalInput");
 
-    const command = terminalInput.value.trim().toLowerCase();
-    terminalInput.value = "";
+  if (!terminalInput) return;
+  if (document.activeElement !== terminalInput) return;
+  if (event.key !== "Enter") return;
 
-    if (!command) return;
+  event.preventDefault();
+  runTerminalCommand();
+});
 
-    writeTerminalLine(`ege@egeos:~$ ${command}`);
+const terminalRun = document.getElementById("terminalRun");
 
-    if (command === "clear") {
-      terminalBox.innerHTML = "";
-      return;
-    }
-
-    const response = commands[command];
-
-    if (response) {
-      response.forEach(writeTerminalLine);
-    } else {
-      writeTerminalLine(`Command not found: ${command}`);
-      writeTerminalLine("Type 'help' to see available commands.");
-    }
-  });
+if (terminalRun) {
+  terminalRun.addEventListener("click", runTerminalCommand);
 }
