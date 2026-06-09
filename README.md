@@ -1,27 +1,12 @@
-# Ege Aksoy — Portfolio
+# Ege Aksoy Portfolio
 
-Personal portfolio website showcasing projects and experience in:
+## Acknowledgements
 
-- Real-time data systems
-- Crypto market analysis
-- Networking and automation
-- Software engineering fundamentals
+This project was originally forked and adapted from Henry Heffernan’s open-source portfolio website.
 
-## Tech Stack
+Original Repository:
+https://github.com/henryjeff/portfolio-website
 
-- HTML
-- CSS
-- JavaScript
+The current version is being actively redesigned, extended, and customized to represent my own work, experiences, and projects.
 
-## Projects Featured
-
-- Real-Time Opportunity Detector
-- Network Sniffer (Python & Scapy)
-- Cryptography Implementations (Java)
-- Frontend Interactive Game
-
-## Contact
-
-- Email: egeaksoy@ug.bilkent.edu.tr  
-- GitHub: https://github.com/egeaksoy00  
-- LinkedIn: https://www.linkedin.com/in/egeaksoy00/
+Special thanks to Henry Heffernan for making the original project publicly available.
