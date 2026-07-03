@@ -805,3 +805,16 @@ h3 {
 .education-card {
   margin-bottom: 28px;
 }
+
+
+.certifications {
+    margin-top: 48px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 32px;
+}
+
+.certifications h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
