@@ -175,5 +175,3 @@ if (terminalRun) {
   terminalRun.addEventListener("click", runTerminalCommand);
 }
 
-
-<script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
