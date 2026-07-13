@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/monitor",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

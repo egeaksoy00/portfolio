@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InternGuide — Internship Outreach, Systemized</title>
+  <meta name="description" content="InternGuide is a private technical showcase by Ege Aksoy for company discovery, contact extraction, filtering, run tracking, and structured outreach workflows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">IG</span><span>InternGuide</span></a>
+    <nav class="nav"><a href="#workflow">Workflow</a><a href="#features">Features</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a></nav>
+    <a class="portfolio-link" href="https://egeaksoy.net" target="_blank" rel="noopener">egeaksoy.net ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">PRIVATE TECHNICAL SHOWCASE · 2026</p>
+        <h1>Internship outreach.<br /><span>Systemized.</span></h1>
+        <p class="hero-lead">A run-based workflow for discovering company contacts, filtering relevant addresses, tracking progress, and preparing structured outreach datasets.</p>
+        <div class="hero-actions"><a class="button primary" href="#workflow">Explore the system</a><a class="button secondary" href="mailto:egeaksoy@ug.bilkent.edu.tr">Ask about the project</a></div>
+        <div class="hero-tags"><span>COMPANY DISCOVERY</span><span>CONTACT EXTRACTION</span><span>SMART FILTERING</span><span>RUN TRACKING</span></div>
+      </div>
+
+      <div class="hero-visual browser-frame">
+        <div class="browser-bar"><div class="traffic"><span></span><span></span><span></span></div><div class="address">intern.guide / run / active</div><div class="browser-status">LIVE</div></div>
+        <div class="dashboard-preview">
+          <aside class="preview-sidebar"><div class="preview-logo">IG</div><span class="preview-nav active"></span><span class="preview-nav"></span><span class="preview-nav"></span><span class="preview-nav"></span></aside>
+          <div class="preview-main">
+            <div class="preview-topline"><div><small>ACTIVE RUN</small><strong>Ruhr Area Internship Search</strong></div><div class="status-pill">RUNNING</div></div>
+            <div class="preview-metrics"><div><span>Domains</span><strong>400</strong></div><div><span>Processed</span><strong>286</strong></div><div><span>Emails</span><strong>713</strong></div></div>
+            <div class="preview-progress"><div class="progress-head"><span>Run progress</span><strong>71%</strong></div><div class="progress-track"><span></span></div></div>
+            <div class="preview-table">
+              <div class="preview-row header"><span>Company</span><span>Email</span><span>Source</span></div>
+              <div class="preview-row"><span>maschinenbau.de</span><span>bewerbung@...</span><span>/karriere</span></div>
+              <div class="preview-row"><span>industry-tech.de</span><span>jobs@...</span><span>/jobs</span></div>
+              <div class="preview-row"><span>automation.de</span><span>personal@...</span><span>/kontakt</span></div>
+              <div class="preview-row"><span>engineering.de</span><span>hr@...</span><span>/impressum</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow section-shell" id="workflow">
+      <div class="section-intro"><p class="eyebrow">01 — WORKFLOW</p><h2>Built to remove the repetitive work from internship outreach.</h2><p>InternGuide turns a raw company list into a structured, reviewable contact dataset through a sequence of controlled processing stages.</p></div>
+      <div class="workflow-track">
+        <article class="workflow-step"><span class="step-index">01</span><h3>Upload Companies</h3><p>Import a structured CSV containing company domains and target locations.</p></article><div class="workflow-arrow">→</div>
+        <article class="workflow-step"><span class="step-index">02</span><h3>Discover Contacts</h3><p>Inspect relevant company pages for public career and contact addresses.</p></article><div class="workflow-arrow">→</div>
+        <article class="workflow-step"><span class="step-index">03</span><h3>Filter Emails</h3><p>Prioritize recruiting, career, HR, application, and general business contacts.</p></article><div class="workflow-arrow">→</div>
+        <article class="workflow-step"><span class="step-index">04</span><h3>Export Results</h3><p>Produce a deduplicated, outreach-ready CSV for the next stage of the workflow.</p></article>
+      </div>
+    </section>
+
+    <section class="showcase section-shell">
+      <div class="showcase-copy"><p class="eyebrow">02 — RUN-BASED SYSTEM</p><h2>Every operation is tracked as an independent run.</h2><p>Live polling, structured logs, progress tracking, and persisted state make each run observable from upload to export.</p><div class="detail-list"><div><span>01</span><strong>Atomic persistence</strong></div><div><span>02</span><strong>Live polling</strong></div><div><span>03</span><strong>Progress tracking</strong></div><div><span>04</span><strong>CSV export</strong></div></div></div>
+      <div class="terminal-panel"><div class="terminal-bar"><span>run.log</span><span class="terminal-live">● LIVE</span></div><div class="terminal-content"><p><span>10:41:02</span> Run initialized</p><p><span>10:41:03</span> Loaded 400 domains</p><p><span>10:41:08</span> Processing /kontakt</p><p><span>10:41:11</span> Found bewerbung@...</p><p><span>10:41:17</span> Deduplicated domain result</p><p><span>10:41:22</span> Persisted active run state</p><p class="terminal-current"><span>10:41:28</span> Scanning next company...</p></div></div>
+    </section>
+
+    <section class="features section-shell" id="features">
+      <div class="section-intro compact"><p class="eyebrow">03 — FEATURES</p><h2>Focused on the parts that usually waste time.</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-code">DISCOVERY</span><h3>Company Discovery</h3><p>Prepare and process structured company-domain datasets for targeted search regions.</p></article>
+        <article class="feature-card"><span class="feature-code">EXTRACTION</span><h3>Contact Extraction</h3><p>Search career, contact, jobs, application, and legal pages for relevant public addresses.</p></article>
+        <article class="feature-card"><span class="feature-code">FILTERING</span><h3>Smart Filtering</h3><p>Keep useful HR and recruiting addresses while suppressing clearly irrelevant categories.</p></article>
+        <article class="feature-card"><span class="feature-code">EXPORT</span><h3>Structured Export</h3><p>Return deduplicated email datasets in a simplified CSV format for controlled outreach.</p></article>
+      </div>
+    </section>
+
+    <section class="system section-shell">
+      <div class="section-intro compact"><p class="eyebrow">04 — UNDER THE HOOD</p><h2>A small system, built like a system.</h2></div>
+      <div class="stack-grid"><div class="stack-card"><span>FRONTEND</span><strong>React / Vite</strong><p>Run controls, progress UI, result inspection.</p></div><div class="stack-card"><span>API LAYER</span><strong>Express</strong><p>Run lifecycle, status endpoints, export flow.</p></div><div class="stack-card"><span>ENGINE</span><strong>Node.js</strong><p>Concurrency, page discovery, filtering, deduplication.</p></div><div class="stack-card"><span>PERSISTENCE</span><strong>Atomic JSON</strong><p>Debounced run-state persistence using temp-write and rename.</p></div></div>
+      <div class="system-note">Built with concurrency control, domain-level deduplication, network failure handling, and persistent run state.</div>
+    </section>
+
+    <section class="architecture section-shell" id="architecture">
+      <div class="section-intro compact"><p class="eyebrow">05 — ARCHITECTURE</p><h2>From raw domains to structured contacts.</h2></div>
+      <div class="architecture-flow"><div class="arch-node"><span>INPUT</span><strong>CSV Input</strong></div><div class="arch-line"></div><div class="arch-node"><span>QUEUE</span><strong>Domain Queue</strong></div><div class="arch-line"></div><div class="arch-node large"><span>ENGINE</span><strong>Scraping Engine</strong><div class="route-tags"><b>/kontakt</b><b>/karriere</b><b>/jobs</b><b>/bewerbung</b><b>/impressum</b></div></div><div class="arch-line"></div><div class="arch-node"><span>FILTER</span><strong>Email Filter</strong></div><div class="arch-line"></div><div class="arch-node"><span>STATE</span><strong>Run Storage</strong></div><div class="arch-line"></div><div class="arch-node"><span>OUTPUT</span><strong>CSV Export</strong></div></div>
+    </section>
+
+    <section class="private-note section-shell"><div><p class="eyebrow">PRIVATE PROJECT</p><h2>Presented as a technical showcase.</h2></div><p>InternGuide's source code and production datasets are not publicly distributed. The project is shown here to explain the workflow, architecture, and engineering decisions.</p></section>
+    <section class="contact section-shell" id="contact"><p class="eyebrow">06 — CONTACT</p><h2>Questions about the system?</h2><a href="mailto:egeaksoy@ug.bilkent.edu.tr">egeaksoy@ug.bilkent.edu.tr ↗</a></section>
+  </main>
+  <footer class="footer section-shell"><span>© <span id="year"></span> Ege Aksoy</span><span>InternGuide · Private Technical Showcase</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

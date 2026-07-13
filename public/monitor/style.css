@@ -834,95 +834,133 @@ h3 {
 
 .showcase-window {
   background:
-    radial-gradient(circle at 82% 18%, rgba(122,162,255,.16), transparent 34%),
-    radial-gradient(circle at 15% 80%, rgba(141,255,203,.10), transparent 38%),
+    radial-gradient(
+      circle at 82% 24%,
+      rgba(122, 162, 255, 0.14),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 12% 88%,
+      rgba(141, 255, 203, 0.08),
+      transparent 34%
+    ),
     var(--panel);
 }
 
 .showcase-content {
+  position: relative;
   height: calc(100% - 42px);
-  padding: 54px;
-  display: grid;
-  grid-template-columns: 1.12fr .88fr;
-  grid-template-rows: 1fr auto;
-  gap: 28px 34px;
+  padding: 58px 64px;
+  display: flex;
+  align-items: center;
   overflow-y: auto;
+  overflow-x: hidden;
   overscroll-behavior: contain;
 }
 
 .showcase-copy {
-  align-self: center;
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
 }
 
 .showcase-copy h1 {
-  font-size: clamp(58px, 7vw, 104px);
-  margin-bottom: 26px;
+  margin: 18px 0 28px;
+  font-size: clamp(64px, 8vw, 118px);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
 }
 
 .showcase-lead {
   max-width: 650px;
+  margin: 0;
   color: #d5dbe3;
-  font-size: clamp(17px, 1.7vw, 23px);
+  font-size: clamp(18px, 1.9vw, 24px);
   line-height: 1.5;
 }
 
+.showcase-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.showcase-meta span {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.035);
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+}
+
+.showcase-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.showcase-contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+  transition: opacity 0.18s ease;
+}
+
+.showcase-contact a:hover {
+  opacity: 0.7;
+}
+
 .showcase-hint {
-  margin-top: 24px;
+  margin-top: 34px;
   color: var(--accent);
   font-family: "DM Mono", monospace;
   font-size: 13px;
 }
 
-.showcase-panel {
-  align-self: center;
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.24);
-  border-radius: 24px;
-  padding: 22px;
+.showcase-mark {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  color: rgba(255, 255, 255, 0.035);
+  font-size: clamp(100px, 18vw, 260px);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.09em;
+  user-select: none;
+  pointer-events: none;
 }
 
-.showcase-panel-header,
-.showcase-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: center;
+.showcase-mark span {
+  color: rgba(141, 255, 203, 0.05);
 }
 
-.showcase-panel-header {
-  margin-bottom: 20px;
-}
+@media (max-width: 860px) {
+  .showcase-content {
+    padding: 32px;
+    align-items: flex-start;
+  }
 
-.showcase-line {
-  padding: 16px 0;
-  border-top: 1px solid var(--line);
-}
+  .showcase-copy h1 {
+    font-size: clamp(54px, 16vw, 86px);
+  }
 
-.showcase-line span {
-  color: var(--muted);
-}
+  .showcase-lead {
+    font-size: 17px;
+  }
 
-.showcase-line strong {
-  text-align: right;
-}
+  .showcase-contact {
+    gap: 12px;
+  }
 
-.showcase-footer {
-  grid-column: 1 / -1;
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
-  display: flex;
-  gap: 20px;
-  align-items: baseline;
-}
-
-.showcase-footer span {
-  color: var(--accent);
-  font-size: 12px;
-}
-
-.showcase-footer p {
-  margin: 0;
-  color: var(--muted);
+  .showcase-mark {
+    right: 4%;
+    bottom: 4%;
+  }
 }
 
 /* ==========================================
@@ -1129,4 +1167,7 @@ h3 {
   .credit-main.notice p {
     text-align: center;
   }
+
+
+  
 }
