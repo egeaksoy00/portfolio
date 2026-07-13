@@ -15,33 +15,116 @@
   <div class="noise"></div>
 
   <main class="os-shell">
-    <aside class="dock" aria-label="Desktop navigation">
-      <button class="dock-item active" data-window="home" aria-label="Home">EA</button>
-      <button class="dock-item" data-window="about" aria-label="About">AB</button>
-      <button class="dock-item" data-window="experience" aria-label="Experience">EX</button>
-      <button class="dock-item" data-window="projects" aria-label="Projects">PR</button>
-      <button class="dock-item" data-window="skills" aria-label="Skills">SK</button>
-      <button class="dock-item" data-window="contact" aria-label="Contact">CT</button>
-      <button class="dock-item" data-window="terminal" aria-label="Terminal">TM</button>
-      <button class="dock-item" data-window="status" aria-label="System Status">ST</button>
-      <button class="dock-item" data-window="credits" aria-label="Credits">CR</button>
-    </aside>
-
     <section class="desktop">
       <header class="topbar">
-        <div class="brand">
-          <span class="status-dot"></span>
-          <span>EgeOS</span>
-        </div>
-        <div class="topbar-center">Information Systems Student · Bilkent University</div>
+        <div class="brand">EgeOS</div>
+        <div class="topbar-center" id="activeAppName">Desktop</div>
         <div class="clock" id="clock">00:00</div>
       </header>
 
-      <section class="hero-window window active" id="home">
+      <div class="desktop-wallpaper" aria-hidden="true">
+        <div class="wallpaper-glow glow-one"></div>
+        <div class="wallpaper-glow glow-two"></div>
+        <div class="wallpaper-grid"></div>
+        <div class="wallpaper-signature">
+          <span>EGEOS</span>
+          <small>PERSONAL SYSTEM · BUILD 2026</small>
+        </div>
+      </div>
+
+      <nav class="desktop-apps" aria-label="EgeOS applications">
+        <button class="desktop-app app-profile" data-window="home" aria-label="Open Profile">
+          <span class="app-icon">EA</span>
+          <span class="app-label">Profile</span>
+        </button>
+        <button class="desktop-app app-showcase" data-window="showcase" aria-label="Open My Showcase">
+          <span class="app-icon">MS</span>
+          <span class="app-label">My Showcase</span>
+        </button>
+        <button class="desktop-app app-about" data-window="about" aria-label="Open About Me">
+          <span class="app-icon">ME</span>
+          <span class="app-label">About Me</span>
+        </button>
+        <button class="desktop-app app-education" data-window="education" aria-label="Open Education">
+          <span class="app-icon">ED</span>
+          <span class="app-label">Education</span>
+        </button>
+        <button class="desktop-app app-experience" data-window="experience" aria-label="Open Experience">
+          <span class="app-icon">EX</span>
+          <span class="app-label">Experience</span>
+        </button>
+        <button class="desktop-app app-projects" data-window="projects" aria-label="Open Projects">
+          <span class="app-icon">PR</span>
+          <span class="app-label">Projects</span>
+        </button>
+        <button class="desktop-app app-skills" data-window="skills" aria-label="Open Skills">
+          <span class="app-icon">S</span>
+          <span class="app-label">Skills</span>
+        </button>
+        <button class="desktop-app app-contact" data-window="contact" aria-label="Open Contact">
+          <span class="app-icon">@</span>
+          <span class="app-label">Contact</span>
+        </button>
+        <button class="desktop-app app-terminal" data-window="terminal" aria-label="Open Terminal">
+          <span class="app-icon">>_</span>
+          <span class="app-label">Terminal</span>
+        </button>
+        <button class="desktop-app app-status" data-window="status" aria-label="Open System Status">
+          <span class="app-icon">ST</span>
+          <span class="app-label">System Status</span>
+        </button>
+        <button class="desktop-app app-credits" data-window="credits" aria-label="Open Credits">
+          <span class="app-icon">CR</span>
+          <span class="app-label">Credits</span>
+        </button>
+      </nav>
+
+      <div class="window-layer" id="windowLayer">
+<section class="window app-window active showcase-window" id="showcase" data-app-title="My Showcase">
         <div class="window-bar">
           <div class="traffic">
-            <span></span><span></span><span></span>
+            <button class="window-control close" aria-label="Close"></button>
+            <button class="window-control minimize" aria-label="Minimize"></button>
+            <button class="window-control maximize" aria-label="Maximize"></button>
           </div>
+          <span class="window-title">my-showcase.app</span>
+        </div>
+
+        <div class="showcase-content">
+          <div class="showcase-copy">
+            <p class="eyebrow">EGEOS · PERSONAL SHOWCASE</p>
+            <h1>Welcome to<br />my system.</h1>
+            <p class="showcase-lead">
+              EgeOS is an interactive portfolio built as a personal operating system.
+              Each desktop application opens a different part of my background, work,
+              projects, technical stack, and current direction.
+            </p>
+            <p class="showcase-hint">
+              Close this window with the red button, then explore the desktop.
+            </p>
+          </div>
+
+          <aside class="showcase-panel">
+            <div class="showcase-panel-header">
+              <span class="mono">SYSTEM OVERVIEW</span>
+              <span class="pill live">ONLINE</span>
+            </div>
+            <div class="showcase-line"><span>Owner</span><strong>Ege Aksoy</strong></div>
+            <div class="showcase-line"><span>Role</span><strong>Information Systems Student</strong></div>
+            <div class="showcase-line"><span>University</span><strong>Bilkent University</strong></div>
+            <div class="showcase-line"><span>Focus</span><strong>Software · Data · Automation</strong></div>
+            <div class="showcase-line"><span>Mode</span><strong>Building</strong></div>
+          </aside>
+
+          <div class="showcase-footer">
+            <span class="mono">NAVIGATION TIP</span>
+            <p>Open an application from the desktop. Only one application is displayed at a time.</p>
+          </div>
+        </div>
+      </section>
+<section class="hero-window window app-window" id="home" data-app-title="Profile">
+        <div class="window-bar">
+          <div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div>
           <span class="window-title">/home/ege/portfolio</span>
         </div>
 
@@ -90,9 +173,8 @@
           <div><strong>Automation</strong><span>n8n · Power Automate</span></div>
         </div>
       </section>
-
-      <section class="window" id="about">
-        <div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><span class="window-title">about.md</span></div>
+<section class="window app-window" id="about" data-app-title="About Me">
+        <div class="window-bar"><div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div><span class="window-title">about.md</span></div>
         <div class="content two-col">
           <div>
             <p class="eyebrow">01 — About</p>
@@ -107,37 +189,49 @@
               <div><span>Graduation</span><strong>May 2028</strong></div>
               <div><span>IELTS</span><strong>7.5 / C1</strong></div>
             </div>
-<div class="education-section">
-  <p class="eyebrow">01.1 — EDUCATION</p>
-
-  <div class="education-card">
-    <h3>Bilkent University</h3>
-    <span class="education-years">2023 — 2028</span>
-    <p>
-      Pursuing a B.Sc. in Computer Technologies and Information Systems (CTIS),
-      focusing on software engineering, information systems, networking,
-      databases, algorithms, and modern software development practices.
-    </p>
-  </div>
-
-  <div class="education-card">
-    <h3>South East Technological University (SETU)</h3>
-    <span class="education-years">Erasmus+ • Fall 2026</span>
-    <p>
-      Exchange semester at SETU Carlow, Ireland, studying software development,
-      advanced programming, cloud technologies, software engineering, and
-      operating systems.
-    </p>
-  </div>
 </div>
-
-          </div>
         </div>
-        
       </section>
+<section class="window app-window" id="education" data-app-title="Education">
+  <div class="window-bar">
+    <div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div>
+    <span class="window-title">education.profile</span>
+  </div>
+  <div class="content">
+    <p class="eyebrow">02 — Education</p>
+    <h2>Academic Path</h2>
 
-      <section class="window" id="experience">
-        <div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><span class="window-title">experience.log</span></div>
+    <div class="education-app-grid">
+      <article class="education-app-card">
+        <div class="education-app-meta">
+          <span class="education-app-code">BILKENT</span>
+          <span class="education-years">2023 — 2028</span>
+        </div>
+        <h3>Bilkent University</h3>
+        <p class="muted">B.Sc. · Computer Technologies & Information Systems</p>
+        <p>
+          Studying software engineering, information systems, networking,
+          databases, algorithms, and modern software development practices.
+        </p>
+      </article>
+
+      <article class="education-app-card exchange">
+        <div class="education-app-meta">
+          <span class="education-app-code">ERASMUS+</span>
+          <span class="education-years">Fall 2026</span>
+        </div>
+        <h3>South East Technological University</h3>
+        <p class="muted">SETU Carlow · Ireland</p>
+        <p>
+          Exchange semester focused on advanced programming, cloud development,
+          software engineering, data structures and algorithms, and operating systems.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="window app-window" id="experience" data-app-title="Experience">
+        <div class="window-bar"><div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div><span class="window-title">experience.log</span></div>
         <div class="content">
           <p class="eyebrow">02 — Experience</p>
           <h2>Internship Experience</h2>
@@ -174,9 +268,8 @@
 </article>
         </div>
       </section>
-
-      <section class="window" id="projects">
-        <div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><span class="window-title">projects/selected-work</span></div>
+<section class="window app-window" id="projects" data-app-title="Projects">
+        <div class="window-bar"><div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div><span class="window-title">projects/selected-work</span></div>
         <div class="content">
           <p class="eyebrow">03 — Projects</p>
           <h2>Selected Work</h2>
@@ -254,10 +347,9 @@
           </div>
         </div>
       </section>
-
-<section class="window" id="skills">
+<section class="window app-window" id="skills" data-app-title="Skills">
   <div class="window-bar">
-    <div class="traffic"><span></span><span></span><span></span></div>
+    <div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div>
     <span class="window-title">skills.json</span>
   </div>
 
@@ -291,13 +383,21 @@
         data-share-badge-id="f036ee39-73c9-4c79-9121-bb4b14f65a26"
         data-share-badge-host="https://www.credly.com">
       </div>
+
+      <div 
+      data-iframe-width="150" 
+      data-iframe-height="270" 
+      data-share-badge-id="e273eee4-c653-453e-ac74-fa486362a8f6"
+      data-share-badge-host="https://www.credly.com">
+      </div>
+
+      
     </div>
 
   </div>
 </section>
-
-      <section class="window" id="contact">
-        <div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><span class="window-title">contact.sh</span></div>
+<section class="window app-window" id="contact" data-app-title="Contact">
+        <div class="window-bar"><div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div><span class="window-title">contact.sh</span></div>
         <div class="content contact-content">
           <p class="eyebrow">05 — Contact</p>
           <h2>Let's Connect</h2>
@@ -309,9 +409,8 @@
           </div>
         </div>
       </section>
-
-      <section class="window" id="terminal">
-  <div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><span class="window-title">terminal.exe</span></div>
+<section class="window app-window" id="terminal" data-app-title="Terminal">
+  <div class="window-bar"><div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div><span class="window-title">terminal.exe</span></div>
   <div class="content terminal-content">
     <p class="eyebrow">Terminal App</p>
     <div class="terminal-box" id="terminalBox">
@@ -323,9 +422,8 @@
     </div>
   </div>
 </section>
-
-<section class="window" id="status">
-  <div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><span class="window-title">system-status.json</span></div>
+<section class="window app-window" id="status" data-app-title="System Status">
+  <div class="window-bar"><div class="traffic"><button class="window-control close" aria-label="Close"></button><button class="window-control minimize" aria-label="Minimize"></button><button class="window-control maximize" aria-label="Maximize"></button></div><span class="window-title">system-status.json</span></div>
   <div class="content">
     <p class="eyebrow">Live System Status</p>
     <h2>System Status</h2>
@@ -339,28 +437,105 @@
     </div>
   </div>
 </section>
-
-<section class="window" id="credits">
-  <div class="window-bar"><div class="traffic"><span></span><span></span><span></span></div><span class="window-title">credits.md</span></div>
-  <div class="content credits-content">
-    <p class="eyebrow">Special Thanks</p>
-    <h2>Credits</h2>
-    <p>
-      This interactive portfolio experience is inspired by Henry Heffernan’s original
-      portfolio concept and open-source work.
-    </p>
-    <p>
-      Special thanks to Henry Heffernan for making the original project publicly available.
-    </p>
-    <div class="credits-links">
-      <a href="https://henryheffernan.com/" target="_blank" rel="noopener">Henry’s Website ↗</a>
-      <a href="https://github.com/henryjeff/portfolio-website" target="_blank" rel="noopener">Original 3D Portfolio Repo ↗</a>
+<section class="window app-window credits-window" id="credits" data-app-title="Credits">
+  <div class="window-bar">
+    <div class="traffic">
+      <button class="window-control close" aria-label="Close"></button>
+      <button class="window-control minimize" aria-label="Minimize"></button>
+      <button class="window-control maximize" aria-label="Maximize"></button>
     </div>
+    <span class="window-title">credits.sequence</span>
+  </div>
+
+  <div class="credits-sequence" id="creditsSequence">
+    <article class="credit-slide active">
+      <div class="credit-heading">
+        <p class="eyebrow">EGEOS · 2026</p>
+        <h2>Credits</h2>
+        <p>Personal system build</p>
+      </div>
+      <div class="credit-main">
+        <h3>Engineering &amp; Design</h3>
+        <div class="credit-columns">
+          <p>Ege Aksoy</p>
+          <p>Interface, development,<br />system design &amp; content</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="credit-slide">
+      <div class="credit-heading">
+        <p class="eyebrow">EGEOS · 2026</p>
+        <h2>Credits</h2>
+        <p>Personal system build</p>
+      </div>
+      <div class="credit-main">
+        <h3>Original Inspiration</h3>
+        <div class="credit-columns">
+          <p>Henry Heffernan</p>
+          <p>Original interactive<br />portfolio concept</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="credit-slide">
+      <div class="credit-heading">
+        <p class="eyebrow">EGEOS · 2026</p>
+        <h2>Credits</h2>
+        <p>Personal system build</p>
+      </div>
+      <div class="credit-main">
+        <h3>Technology</h3>
+        <div class="credit-columns">
+          <p>JavaScript<br />HTML<br />CSS</p>
+          <p>Webpack<br />Three.js ecosystem<br />Web Audio</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="credit-slide">
+      <div class="credit-heading">
+        <p class="eyebrow">EGEOS · 2026</p>
+        <h2>Credits</h2>
+        <p>Personal system build</p>
+      </div>
+      <div class="credit-main">
+        <h3>Special Thanks</h3>
+        <div class="credit-columns">
+          <p>Bilkent University<br />Virgosol<br />Göltaş Çimento</p>
+          <p>Friends, mentors<br />and everyone who<br />supported the build</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="credit-slide">
+      <div class="credit-heading">
+        <p class="eyebrow">EGEOS · 2026</p>
+        <h2>Credits</h2>
+        <p>Personal system build</p>
+      </div>
+      <div class="credit-main notice">
+        <h3>Important Notice</h3>
+        <p>
+          EgeOS is my personal adaptation of an open-source interactive portfolio concept.
+          The portfolio content, desktop interface, application structure, and EgeOS presentation
+          were customized for my own work and profile.
+        </p>
+      </div>
+    </article>
+
+    <button class="credit-continue" id="creditContinue" type="button">
+      Click to continue...
+    </button>
+    <div class="credit-progress" id="creditProgress" aria-label="Credits progress"></div>
+    <div class="credit-timer" id="creditTimer" aria-hidden="true"><span></span></div>
   </div>
 </section>
+      </div>
     </section>
   </main>
-<script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+
+  <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
