@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /audio/
+Disallow: /draco/
+Disallow: /images/
+Disallow: /monitor/
+Disallow: /models/
+Disallow: /textures/
+
+Sitemap: https://egeaksoy.net/sitemap.xml
