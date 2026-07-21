@@ -145,24 +145,6 @@ h1 {
   stroke: none;
 }
 
-.profile-photo {
-  width: 128px;
-  height: 128px;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #dadde5;
-  filter: grayscale(1);
-}
-
-.profile-photo img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-}
-
 
 .content-section {
   margin-top: 42px;
@@ -382,19 +364,6 @@ kbd {
     gap: 28px;
   }
 
-  .profile-photo {
-    grid-row: 1;
-    width: 96px;
-    min-width: 96px;
-    height: 96px;
-  }
-
-  .profile-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
 
   .timeline-item {
     grid-template-columns: 1fr;
