@@ -184,7 +184,10 @@ export default class MonitorScreen extends EventEmitter {
 
         // Set iframe attributes
         // PROD
-        iframe.src = '../monitor/index.html';
+        iframe.src = new URL(
+            'monitor/index.html',
+            document.baseURI
+        ).toString();
         /**
          * Use dev server is query params are present
          *

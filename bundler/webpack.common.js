@@ -3,21 +3,59 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
+const publicDirectory = path.resolve(__dirname, '../public');
+const staticDirectory = path.resolve(__dirname, '../static');
+const egeosStaticDirectories = [
+    'audio',
+    'draco',
+    'images',
+    'models',
+    'monitor',
+    'textures',
+];
+
 module.exports = {
     entry: path.resolve(__dirname, '../src/script.ts'),
     output: {
         hashFunction: 'xxhash64',
         filename: 'bundle.[contenthash].js',
-        path: path.resolve(__dirname, '../public'),
+        path: path.resolve(publicDirectory, 'egeos'),
+        publicPath: '/egeos/',
     },
     devtool: 'source-map',
     plugins: [
         new CopyWebpackPlugin({
-            patterns: [{ from: path.resolve(__dirname, '../static') }],
+            patterns: [
+                ...egeosStaticDirectories.map((directory) => ({
+                    from: path.resolve(staticDirectory, directory),
+                    to: path.resolve(publicDirectory, 'egeos', directory),
+                    globOptions: {
+                        ignore: ['**/.DS_Store', '**/.gitkeep'],
+                    },
+                })),
+                ...['cv', 'internguide'].map((directory) => ({
+                    from: path.resolve(staticDirectory, directory),
+                    to: path.resolve(publicDirectory, directory),
+                    globOptions: {
+                        ignore: ['**/.DS_Store'],
+                    },
+                })),
+                ...[
+                    'index.html',
+                    'style.css',
+                    'script.js',
+                    'robots.txt',
+                    'sitemap.xml',
+                ].map((file) => ({
+                    from: path.resolve(staticDirectory, file),
+                    to: path.resolve(publicDirectory, file),
+                })),
+            ],
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
             minify: true,
+            publicPath: '/egeos/',
         }),
         new MiniCSSExtractPlugin(),
     ],

@@ -32,6 +32,10 @@ module.exports = merge(
                 watch: true,
                 directory: path.join(__dirname, '../static')
             },
+            devMiddleware:
+            {
+                publicPath: '/egeos/'
+            },
             client:
             {
                 logging: 'none',

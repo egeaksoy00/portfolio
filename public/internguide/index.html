@@ -9,6 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/internguide/style.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "InternGuide",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "InternGuide transforms structured company data into a complete internship outreach pipeline — discovering relevant contact channels, generating context-aware AI drafts, and routing every message through human approval before delivery.",
+  "url": "https://egeaksoy.net/internguide",
+  "author": {
+    "@type": "Person",
+    "name": "Ege Aksoy",
+    "url": "https://egeaksoy.net"
+  }
+}
+</script>
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -26,15 +42,15 @@
       <a href="#generate">Generate</a>
       <a href="#engineering">Engineering</a>
     </nav>
-    <a class="portfolio-link" href="https://egeaksoy.net" rel="noopener">← EgeOS</a>
+    <a class="portfolio-link" href="/egeos/" rel="noopener">← EgeOS</a>
   </header>
 
   <main id="top">
     <section class="hero section-shell">
       <div class="hero-copy">
-        <p class="eyebrow">PRIVATE FULL-STACK PROJECT · 2026</p>
+        <p class="eyebrow">AI-POWERED OUTREACH ENGINE · 2026</p>
         <h1>Internship outreach,<br /><span>end to end.</span></h1>
-        <p class="hero-lead">InternGuide converts structured company data into verified contact channels, AI-generated internship drafts, and human-approved email delivery.</p>
+        <p class="hero-lead">InternGuide transforms structured company data into a complete internship outreach pipeline — discovering relevant contact channels, generating context-aware AI drafts, and routing every message through human approval before delivery.</p>
         <div class="hero-actions">
           <a class="button primary" href="#workflow">See the workflow</a>
           <a class="button secondary" href="mailto:egeaksoy@ug.bilkent.edu.tr">Discuss the project</a>
@@ -48,14 +64,84 @@
         </div>
       </div>
 
-      <figure class="product-frame hero-frame reveal-item">
+      <div class="live-pipeline hero-frame reveal-item" aria-label="Animated InternGuide live pipeline visualization">
         <div class="window-bar">
           <div class="traffic"><span></span><span></span><span></span></div>
-          <span>internguide / email-scraper</span>
+          <span>internguide / live-pipeline</span>
           <b>PRIVATE BUILD</b>
         </div>
-        <img src="/internguide/mailScraper.png" alt="InternGuide company email scraper interface" />
-      </figure>
+
+        <div class="live-pipeline-body">
+          <div class="live-pipeline-topline">
+            <div>
+              <span class="live-status-dot"></span>
+              <span>SYSTEM ONLINE</span>
+            </div>
+            <span>HUMAN-IN-THE-LOOP</span>
+          </div>
+
+          <div class="live-input-card">
+            <span class="live-label">INPUT</span>
+            <strong>48 COMPANIES</strong>
+            <small>STRUCTURED COMPANY DATA</small>
+          </div>
+
+          <div class="live-flow-line"><span></span></div>
+
+          <div class="live-stage live-stage-discover">
+            <div class="live-stage-index">01</div>
+            <div class="live-stage-copy">
+              <span>DISCOVER</span>
+              <strong>Public contact channels</strong>
+            </div>
+            <div class="live-stage-metric"><b data-pipeline-counter="513">0</b><small>PAGES SCANNED</small></div>
+          </div>
+
+          <div class="live-flow-line"><span></span></div>
+
+          <div class="live-stage live-stage-filter">
+            <div class="live-stage-index">02</div>
+            <div class="live-stage-copy">
+              <span>PROCESS</span>
+              <strong>Filter + deduplicate</strong>
+            </div>
+            <div class="live-stage-metric"><b>TRACEABLE</b><small>SOURCE EVIDENCE</small></div>
+          </div>
+
+          <div class="live-flow-line"><span></span></div>
+
+          <div class="live-stage live-stage-generate">
+            <div class="live-stage-index">03</div>
+            <div class="live-stage-copy">
+              <span>GENERATE</span>
+              <strong>Context-aware AI drafts</strong>
+            </div>
+            <div class="live-stage-metric"><b data-pipeline-counter="26">0</b><small>DRAFTS QUEUED</small></div>
+          </div>
+
+          <div class="live-flow-line"><span></span></div>
+
+          <div class="live-approval">
+            <div>
+              <span class="live-label">CONTROL</span>
+              <strong>WAITING APPROVAL</strong>
+              <small>Explicit human decision required before delivery</small>
+            </div>
+            <div class="live-actions" aria-hidden="true">
+              <span class="live-approve">APPROVE</span>
+              <span class="live-reject">REJECT</span>
+            </div>
+          </div>
+
+          <div class="live-terminal" aria-hidden="true">
+            <span class="terminal-line terminal-line-1">[SCAN] career and contact paths</span>
+            <span class="terminal-line terminal-line-2">[FOUND] relevant recipient channel</span>
+            <span class="terminal-line terminal-line-3">[QUEUE] company context preserved</span>
+            <span class="terminal-line terminal-line-4">[AI] structured draft generated</span>
+            <span class="terminal-line terminal-line-5">[READY] waiting for human approval</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="problem section-shell">
@@ -228,7 +314,7 @@
         <h2>Built privately. Documented publicly.</h2>
       </div>
       <div class="scope-copy">
-        <p>InternGuide is a private, local-first project developed for personal internship workflows and a small number of friends. It processes publicly accessible company pages and does not bypass authentication, CAPTCHAs, or restricted resources.</p>
+        <p>InternGuide is a private, local-first engineering project developed for personal internship outreach workflows and limited use by a small number of friends. The system processes publicly accessible company pages and is not designed to bypass authentication, CAPTCHAs, access controls, or restricted resources.</p>
         <div class="scope-badges"><span>PRIVATE REPOSITORY</span><span>LOCAL RUNTIME</span><span>NON-COMMERCIAL</span></div>
       </div>
     </section>

@@ -1,9 +1,46 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "outputDirectory": "public",
   "redirects": [
+    {
+      "source": "/egeos",
+      "destination": "/egeos/",
+      "permanent": true
+    },
+    {
+      "source": "/egeos/monitor",
+      "destination": "/egeos/monitor/",
+      "permanent": true
+    },
+    {
+      "source": "/cv",
+      "destination": "/cv/",
+      "permanent": true
+    },
+    {
+      "source": "/internguide",
+      "destination": "/internguide/",
+      "permanent": true
+    },
     {
       "source": "/monitor",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/monitor/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/monitor/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/((?!$|egeos/?$|egeos/monitor/?$|cv/?$|internguide/?$)(?!.*\\.[^/]+$).*)",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }
